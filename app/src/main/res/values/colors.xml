@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+<color name="transparent">#00000000</color>
+    <color name="custom_toolbar_color">#D28C00</color>
+<color name="gray">#e6e6e6</color>
+<color name="blue">#2f88ff</color>
+
+
+</resources>

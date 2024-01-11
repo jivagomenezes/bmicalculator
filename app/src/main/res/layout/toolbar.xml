@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue"
+    android:elevation="6dp"
+    android:layout_height="wrap_content"
+    >
+
+    <!-- Add an ImageView for your vector drawable logo -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/weight_svgrepo_com"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="start"
+        android:contentDescription="@string/logo_content_description" />
+
+    <TextView
+        android:id="@+id/appNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI Calculator"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textSize="22sp" />
+
+    <!-- Add a menu for your overflow items -->
+
+</androidx.appcompat.widget.Toolbar>

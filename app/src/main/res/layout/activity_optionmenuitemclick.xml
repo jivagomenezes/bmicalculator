@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CoordinatorLayout é um layout que coordena interações entre diferentes elementos de interface -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_fragment_content_optionmenuitemclick"
+    android:name="androidx.navigation.fragment.NavHostFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Optionmenuitemclick">
+
+    <!-- Inclui o layout personalizado da barra de ferramentas -->
+
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar"
+        />
+
+
+    <!-- TextView para exibir informações "Sobre Nós" -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/about_us"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:background="@color/gray"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:justificationMode="inter_word"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

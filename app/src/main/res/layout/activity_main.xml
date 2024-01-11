@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DrawerLayout é um layout que permite a criação de uma gaveta de navegação -->
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <!-- Conteúdo principal -->
+
+    <!-- TextViews para exibição de informações e dicas -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAR RESULT" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CLEAR RESULT" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your height in &quot;meters&quot; (Ex. 1.70)" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your height in &quot;meters&quot; (Ex. 1.70)" />
+
+    <!-- LinearLayout para organizar os elementos de interface -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- AppBarLayout contendo a barra de ferramentas personalizada -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar"/>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- TextView explicativa -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter your weight and height to calculate your BMI:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"/>
+
+        <!-- EditText para inserção de peso -->
+        <EditText
+            android:id="@+id/editPeso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:hint="Enter your weight in &quot;kg&quot;"
+            android:inputType="number|numberDecimal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" />
+
+        <!-- EditText para inserção de altura -->
+        <EditText
+            android:id="@+id/editAltura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:ems="10"
+            android:hint='Enter your height in "meters" (Ex. 1.70)'
+            android:inputType="number|numberDecimal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <!-- TextView para exibir o resultado -->
+        <TextView
+            android:id="@+id/textResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RESULT:"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Botões para calcular e limpar resultado -->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="calcularImc"
+            android:text="CALCULATE"
+            android:textColorLink="#FF9800"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <Button
+            android:id="@+id/buttonLimpar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="limparResultado"
+            android:text="CLEAR RESULT"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <!-- ScrollView para permitir rolagem -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- TableLayout para exibição dinâmica de dados -->
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+                <!-- As linhas da tabela serão preenchidas dinamicamente aqui -->
+
+            </TableLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
